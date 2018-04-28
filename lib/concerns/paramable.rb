@@ -1,7 +1,7 @@
 module Paramable
   module InstanceMethods
-    def self.find_by_name(name)
-      self.all.detect{|a| a.name == name}
+    def to_param
+      name.downcase.gsub(' ', '-')
     end
   end
 end
